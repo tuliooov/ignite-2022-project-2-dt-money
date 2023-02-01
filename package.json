@@ -12,6 +12,8 @@
     "url": "https://github.com/tuliooov/ignite-2022-project-2-dt-money/issues"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "touch ./dist/.nojekyll && gh-pages -d dist -t true",
     "dev": "vite",
     "dev:server": "json-server db.json -p 3333 -w -d 500",
     "lint": "eslint src --ext .ts,tsx",

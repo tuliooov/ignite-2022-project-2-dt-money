@@ -21,7 +21,10 @@ Nesse módulo construiremos uma aplicação front-end web completa, conectando a
 - [x] Cálculo das entradas, saídas e total;
 - [x] Campo de busca;
 - [x] Modal para cadastro de nova transação;
-- [x] Layout responsivo (mobile e desktop).
+- [x] Layout responsivo (mobile e desktop);
+- [ ] Listagem das transações (editar e excluir);
+- [ ] WhiteMode;
+- [ ] Change Currency;
 
 
 ## 🛠️ In this project was used
