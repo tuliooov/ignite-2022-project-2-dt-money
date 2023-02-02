@@ -17,14 +17,14 @@ Nesse módulo construiremos uma aplicação front-end web completa, conectando a
 
 ## ToDo:
 
-- [x] Listagem das transações (entradas e saídas);
-- [x] Cálculo das entradas, saídas e total;
-- [x] Campo de busca;
-- [x] Modal para cadastro de nova transação;
-- [x] Layout responsivo (mobile e desktop);
-- [ ] Listagem das transações (editar e excluir);
+- [x] List of transactions (entries and exits);
+- [x] Calculation of inputs, outputs and total;
+- [x] Search field;
+- [x] Modal for registering a new transaction;
+- [x] Responsive layout (mobile and desktop);
+- [ ] List of transactions (edit and delete);
 - [ ] WhiteMode;
-- [ ] Change Currency;
+- [x] Change Currency;
 
 
 ## 🛠️ In this project was used

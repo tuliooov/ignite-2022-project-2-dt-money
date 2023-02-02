@@ -11,6 +11,12 @@ export const HeaderContainer = styled.header`
   }
 `
 
+export const ActionsDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+`
+
 export const HeaderContent = styled.div`
   width: 100%;
   max-width: 1120px;

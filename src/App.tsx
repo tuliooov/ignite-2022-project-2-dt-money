@@ -5,14 +5,17 @@ import { defaultTheme } from './styles/themes/default'
 
 import { TransactionsProvider } from './contexts/TransactionsContext'
 import { Transactions } from './pages/Transactions'
+import { CurrencyProvider } from './contexts/CurrencyContext'
 
 export function App() {
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <TransactionsProvider>
-        <Transactions />
-      </TransactionsProvider>
-      <GlobalStyle />
-    </ThemeProvider>
+    <CurrencyProvider>
+      <ThemeProvider theme={defaultTheme}>
+        <TransactionsProvider>
+          <Transactions />
+        </TransactionsProvider>
+        <GlobalStyle />
+      </ThemeProvider>
+    </CurrencyProvider>
   )
 }

@@ -16,11 +16,20 @@ import {
   CardTransaction,
 } from './styles'
 import { CalendarBlank, TagSimple } from 'phosphor-react'
+import { CurrencyContext } from '../../contexts/CurrencyContext'
 
 export function Transactions() {
   const transactions = useContextSelector(TransactionsContext, (context) => {
     return context.transactions
   })
+
+  const currency = useContextSelector(CurrencyContext, (context) => {
+    return context.currency
+  })
+
+  const priceFormated = priceFormatter(currency.format, currency.currency)
+  const dateFormatted = dateFormatter(currency.format)
+
   return (
     <>
       <Header />
@@ -46,11 +55,11 @@ export function Transactions() {
                 <td>
                   <PriceHighlight variant={transaction.type}>
                     {transaction.type === 'outcome' && '- '}
-                    {priceFormatter.format(transaction.price)}
+                    {priceFormated.format(transaction.price)}
                   </PriceHighlight>
                 </td>
                 <td>{transaction.category}</td>
-                <td>{dateFormatter.format(new Date(transaction.createdAt))}</td>
+                <td>{dateFormatted.format(new Date(transaction.createdAt))}</td>
               </tr>
             ))}
           </tbody>
@@ -63,7 +72,7 @@ export function Transactions() {
                 <span>{transaction.description}</span>
                 <PriceHighlight variant={transaction.type}>
                   {transaction.type === 'outcome' && '- '}
-                  {priceFormatter.format(transaction.price)}
+                  {priceFormated.format(transaction.price)}
                 </PriceHighlight>
               </header>
               <footer>
@@ -73,7 +82,7 @@ export function Transactions() {
                 </div>
                 <div>
                   <CalendarBlank size={16} />
-                  {dateFormatter.format(new Date(transaction.createdAt))}
+                  {dateFormatted.format(new Date(transaction.createdAt))}
                 </div>
               </footer>
             </CardTransaction>
