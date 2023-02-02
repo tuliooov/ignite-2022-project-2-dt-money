@@ -33,10 +33,7 @@ export function CurrencyProvider({ children }: CurrencyProviderProps) {
     },
   ]
 
-  const [currency, setCurrency] = useState({
-    format: 'pt-BR',
-    currency: 'BRL',
-  })
+  const [currency, setCurrency] = useState(optionsCurrency[0])
 
   const changeCurrency = (data: Currency) => {
     setCurrency(data)
