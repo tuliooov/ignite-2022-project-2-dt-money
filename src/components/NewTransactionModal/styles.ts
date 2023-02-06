@@ -14,7 +14,7 @@ export const Content = styled(Dialog.Content)`
   min-width: 32rem;
   border-radius: 6px;
   padding: 2.5rem 3rem;
-  background: ${(props) => props.theme['gray-800']};
+  background: ${(props) => props.theme['background-800']};
 
   position: fixed;
   top: 50%;
@@ -48,12 +48,12 @@ export const Content = styled(Dialog.Content)`
     input {
       border-radius: 6px;
       border: 0;
-      background: ${(props) => props.theme['gray-900']};
-      color: ${(props) => props.theme['gray-300']};
+      background: ${(props) => props.theme['background-900']};
+      color: ${(props) => props.theme['text-300']};
       padding: 1rem;
 
       &::placeholder {
-        color: ${(props) => props.theme['gray-500']};
+        color: ${(props) => props.theme['text-500']};
       }
     }
 
@@ -93,7 +93,7 @@ export const CloseButton = styled(Dialog.Close)`
   top: 1.5rem;
   right: 1.5rem;
   cursor: pointer;
-  color: ${(props) => props.theme['gray-500']};
+  color: ${(props) => props.theme['text-500']};
 `
 
 export const TransactionType = styled(RadioGroup.Root)`
@@ -109,8 +109,8 @@ interface TransactionTypeButtonProps {
 
 /* eslint-disable-next-line */
 export const TransactionTypeButton = styled(RadioGroup.Item)<TransactionTypeButtonProps>`
-  background: ${(props) => props.theme['gray-700']};
-  color: ${(props) => props.theme['gray-300']};
+  background: ${(props) => props.theme['text-700']};
+  color: ${(props) => props.theme['text-300']};
   padding: 1rem;
   display: flex;
   align-items: center;
@@ -129,7 +129,7 @@ export const TransactionTypeButton = styled(RadioGroup.Item)<TransactionTypeButt
   }
 
   &[data-state='unchecked']:hover {
-    background: ${(props) => props.theme['gray-600']};
+    background: ${(props) => props.theme['text-600']};
   }
 
   &[data-state='checked'] {

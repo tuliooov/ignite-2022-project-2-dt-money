@@ -19,7 +19,7 @@ export const TransactionsTable = styled.table`
 
   td {
     padding: 1.25rem 2rem;
-    background: ${(props) => props.theme['gray-700']};
+    background: ${(props) => props.theme['background-card']};
 
     &:first-child {
       border-radius: 6px 0 0 6px;
@@ -59,12 +59,12 @@ export const HeaderTransactions = styled.div`
     display: flex;
     justify-content: space-between;
     margin-bottom: 0.75rem;
-    color: ${(props) => props.theme['gray-300']};
+    color: ${(props) => props.theme['text-300']};
     font-size: 1.125rem;
 
     span:nth-child(2) {
       font-size: 1rem;
-      color: ${(props) => props.theme['gray-500']};
+      color: ${(props) => props.theme['text-500']};
     }
   }
 `
@@ -87,14 +87,14 @@ export const CardTransaction = styled.div`
   padding: 1.25rem;
   gap: 0.75rem;
   width: 100%;
-  background: ${(props) => props.theme['gray-700']};
+  background: ${(props) => props.theme['background-card']};
   border-radius: 6px;
 
   header {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
-    color: ${(props) => props.theme['gray-300']};
+    color: ${(props) => props.theme['text-300']};
   }
 
   footer {
@@ -102,7 +102,7 @@ export const CardTransaction = styled.div`
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-    color: ${(props) => props.theme['gray-500']};
+    color: ${(props) => props.theme['text-500']};
 
     div {
       display: flex;

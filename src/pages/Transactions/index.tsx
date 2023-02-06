@@ -18,7 +18,12 @@ import {
 import { CalendarBlank, TagSimple } from 'phosphor-react'
 import { CurrencyContext } from '../../contexts/CurrencyContext'
 
-export function Transactions() {
+interface TransactionsProps {
+  handleChangeTheme: () => void
+  theme: 'black' | 'white'
+}
+
+export function Transactions({ handleChangeTheme, theme }: TransactionsProps) {
   const transactions = useContextSelector(TransactionsContext, (context) => {
     return context.transactions
   })
@@ -32,7 +37,7 @@ export function Transactions() {
 
   return (
     <>
-      <Header />
+      <Header handleChangeTheme={handleChangeTheme} theme={theme} />
       <Summary />
 
       <TransactionsContainer>

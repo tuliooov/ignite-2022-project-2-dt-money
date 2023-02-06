@@ -22,9 +22,9 @@ Nesse módulo construiremos uma aplicação front-end web completa, conectando a
 - [x] Search field;
 - [x] Modal for registering a new transaction;
 - [x] Responsive layout (mobile and desktop);
-- [ ] List of transactions (edit and delete);
-- [ ] WhiteMode;
+- [x] WhiteMode;
 - [x] Change Currency;
+- [ ] List of transactions (edit and delete);
 
 
 ## 🛠️ In this project was used

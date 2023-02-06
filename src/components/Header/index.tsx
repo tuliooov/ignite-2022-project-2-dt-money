@@ -10,15 +10,23 @@ import { NewTransactionModal } from '../NewTransactionModal'
 
 import logo from '../../assets/logo.svg'
 import { SettingsModal } from '../SettingsModal'
-import { GearSix, Plus } from 'phosphor-react'
+import { GearSix, Moon, Plus, Sun } from 'phosphor-react'
 
-export function Header() {
+interface HeaderProps {
+  handleChangeTheme: () => void
+  theme: 'black' | 'white'
+}
+
+export function Header({ handleChangeTheme, theme }: HeaderProps) {
   return (
     <HeaderContainer>
       <HeaderContent>
         <img src={logo} alt="DT Money 2.0" />
 
         <ActionsDiv>
+          <NewTransactionButton type="button" onClick={handleChangeTheme}>
+            {theme === 'black' ? <Sun size={24} /> : <Moon size={24} />}
+          </NewTransactionButton>
           <Dialog.Root>
             <Dialog.Trigger asChild>
               <NewTransactionButton type="button">
